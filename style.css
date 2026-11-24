@@ -1,0 +1,187 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #f3f4f6;
+  font-family: 'Inter', sans-serif;
+}
+
+.todolist {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.07);
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #18181b;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #71717a;
+  font-size: 14px;
+}
+
+.inputTasks {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#taskValues {
+  flex: 1;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #d4d4d8;
+  border-radius: 9px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+#taskValues:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+#addTasks {
+  padding: 0 18px;
+  border-radius: 9px;
+  background: #7c3aed;
+  color: white;
+}
+
+#addTasks:hover {
+  background: #6d28d9;
+}
+
+#resetTasks {
+  width: 100%;
+  padding: 12px;
+  border-radius: 9px;
+  background: #f4f4f5;
+  color: #52525b;
+  margin-bottom: 25px;
+}
+
+#resetTasks:hover {
+  background: #e4e4e7;
+}
+
+.outputTasks {
+  border-top: 1px solid #eeeeef;
+  padding-top: 20px;
+}
+
+#output {
+  list-style: none;
+}
+
+#output li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px;
+  margin-bottom: 10px;
+  background: #fafafa;
+  border: 1px solid #e4e4e7;
+  border-radius: 9px;
+  color: #27272a;
+  font-size: 14px;
+}
+
+#output li span {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+#output li button {
+  padding: 8px 11px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+#output li button:first-of-type {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+#output li button:last-of-type {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+#output li button:hover {
+  opacity: 0.75;
+}
+
+#errorMsg {
+  color: #dc2626;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  text-align: center;
+  color: #a1a1aa;
+  font-size: 12px;
+  margin-top: 25px;
+}
+
+@media (max-width: 450px) {
+  .todolist {
+    padding: 22px;
+  }
+
+  .inputTasks {
+    flex-direction: column;
+  }
+
+  #addTasks {
+    padding: 13px;
+  }
+}
+.todolist {
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.outputTasks {
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#output {
+  overflow: visible;
+}

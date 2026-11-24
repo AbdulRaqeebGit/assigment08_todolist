@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Todo List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="todolist">
+    <div class="header">
+      <h1>My Tasks</h1>
+      <p>Organize your day, one task at a time.</p>
+    </div>
+
+    <div class="inputTasks">
+      <input
+        type="text"
+        id="taskValues"
+        placeholder="Enter your task..."
+      >
+      <button id="addTasks" onclick="task()">Add Task</button>
+    </div>
+
+    <button id="resetTasks" onclick="rest()">Reset All Tasks</button>
+
+    <div class="outputTasks">
+      <p id="errorMsg"></p>
+      <ul id="output"></ul>
+    </div>
+
+    <div class="footer">
+      Stay focused. Get things done.
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
