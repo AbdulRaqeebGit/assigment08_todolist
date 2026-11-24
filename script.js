@@ -40,7 +40,7 @@ function task() {
     errorMsg.textContent = "invalid Tasks Pleae enter the tasks";
     return;
   }
-    allTasks.push(taskInputs.value);
+  allTasks.push(taskInputs.value);
   taskInputs.value = "";
   outputTasks.innerHTML = "";
   displaytask();
