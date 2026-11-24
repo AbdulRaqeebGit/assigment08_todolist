@@ -32,8 +32,6 @@ function displaytask() {
     list.appendChild(dltButton);
     outputTasks.appendChild(list);
   }
-  taskInputs.value = "";
-  errorMsg.innerHTML = "";
 }
 function task() {
   if (taskInputs.value == "") {
@@ -43,6 +41,7 @@ function task() {
   allTasks.push(taskInputs.value);
   taskInputs.value = "";
   outputTasks.innerHTML = "";
+  errorMsg.innerHTML = "";
   displaytask();
 }
 function rest() {
